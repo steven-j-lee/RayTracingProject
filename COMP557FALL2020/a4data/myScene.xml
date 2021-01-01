@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<scene ambient="0.2 0.2 0.2">
+  <!-- define camera,material,lights here -->
+  <light name="myLight" color="0.8 0.2 0.8" from="10 5 15 " power="0.8" type="point" />
+  <light name="myLight2" color="1 1 1" from="-10 10 2 " power="0.9" type="point" />
+  <material name="red" diffuse="1 0 0" specular="0.5 0.23 1" hardness="18" />
+  <material name="green" diffuse="0 1 0" specular="0.5 0.5 0.5" hardness="16" />
+  <material name="blue" diffuse="0 0 1" specular="0.5 0.5 0.5" hardness="16" />
+  <material name="black" diffuse="0 0 0" specular="0 0 0" hardness="0" />
+  <material name="white" diffuse="1 1 1" specular="0 0 0" hardness="0" />
+    <material name="brownish" diffuse="0.75 0.53 0.05" specular="0 0 0" hardness="64" />
+    <material name="cyan" diffuse="0.75 0.95 0.98" specular="0 0 1" hardness="16" />
+    <material name="yellow" diffuse="1 1 0" specular="0.8 0.8 0.9" hardness="32" />
+    <material name="orange" diffuse="1 0.5 0" specular="0.8 0.8 0.9" hardness="32" />
+    <material name="brown" diffuse="0.38 0.17 0.04" specular="0.8 0.8 0.9" hardness="32" />
+    <material name="grey" diffuse="0.56 0.52 0.5" specular="0.6 0.8 0.9" hardness="32" />
+
+    <!-- render configuration -->
+  <render bgcolor="0.75 0.95 0.98" output="myscene.png" samples="4" >
+    <camera name="myCamera" from="0 1.5 5" to="0 1.5 -5" up="0 1 0" fovy="45" width="480" height="480" />
+  </render>
+  
+  <!-- scene objects -->
+  <node name="root" >
+        <node name = "entity">
+          <mesh name="body" filename="a4data/body.obj" scale="2 2 2">
+              <material ref="brown" />
+          </mesh>
+         </node>
+
+      <node name = "entity2">
+          <mesh name="head" filename="a4data/head.obj" scale="2 2 2" translation="0 2 0">
+              <material ref="grey" />
+          </mesh>
+      </node>
+
+      <sphere center="-1 1.1 -1" radius="0.5" >
+          <material ref="green" />
+      </sphere>
+
+      <plane coeffs="0 1 0 0">
+          <material ref="cyan" />
+          <material2 ref="green" />
+      </plane>
+
+      <node name="box3" translation="1 2 0.2" rotation="20 -15 25" scale="0.2 0.2 0.2" >
+          <box min="-1 0 -1" max="1 2 1">
+              <material ref="yellow" />
+          </box>
+      </node>
+
+      <node name="box1" translation="-1 1 0.2" rotation="88 -15 45" scale="0.1 0.2 0.2" >
+          <box min="-1 0 -1" max="1 2 1">
+              <material ref="blue" />
+          </box>
+      </node>
+
+      <node name="box2" translation="-1 2 0.5" rotation="88 -15 45" scale="0.2 0.3 0.2" >
+          <box min="-1 0 -1" max="1 2 1">
+              <material ref="red" />
+          </box>
+      </node>
+
+      <node name="box4" translation="0 1 -5" rotation="73 -63 85" scale="0.1 0.8 0.2" >
+          <box min="-1 0 -1" max="0 2 2">
+              <material ref="cyan" />
+          </box>
+      </node>
+
+      <node name = "stretchedSphere" translation = "1.8 1 -2" scale="0.5 0.8 0.2" rotation="20 -15 25">
+      <sphere center="-1 0 -1" radius="1.2" >
+          <material ref="orange" />
+      </sphere>
+      </node>
+
+
+  </node>
+
+</scene>
