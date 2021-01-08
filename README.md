@@ -1,4 +1,4 @@
-# RayTracingProject_COMP557
+# RayTracingProject
 ray tracing project created for McGill University's Graphics course
 
 
