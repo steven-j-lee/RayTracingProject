@@ -1,5 +1,5 @@
 # RayTracingProject
-ray tracing project created for McGill University's Graphics course
+ray tracing project 
 
 
 ![alt text](https://github.com/steven-j-lee/RayTracingProject_COMP557/blob/main/COMP557FALL2020/images/myscene.png)
